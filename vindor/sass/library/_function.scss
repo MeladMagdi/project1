@@ -1,0 +1,16 @@
+@mixin vendor($name, $value, $prefix: ())
+{
+  @each $prefixser in $prefix
+  {
+    #{'-' + $prefix + '-' + $name}: $value;
+  }
+  #{$name}: $value;
+}
+
+// @mixin media($mediaName: '@media', $mediaSize)
+// {
+//   #{$mediaName} ($mediaSize)
+//   {
+//     @content: ;
+//   }
+// }
